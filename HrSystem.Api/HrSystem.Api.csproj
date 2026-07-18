@@ -8,4 +8,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HrSystem.Core\HrSystem.Core.csproj" />
+    <ProjectReference Include="..\HrSystem.Data\HrSystem.Data.csproj" />
+    <ProjectReference Include="..\HrSystem.Infrastructure\HrSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
