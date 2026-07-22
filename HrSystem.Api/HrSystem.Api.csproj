@@ -24,4 +24,9 @@
     <ProjectReference Include="..\HrSystem.Infrastructure\HrSystem.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="RequestModels\" />
+  </ItemGroup>
+
 </Project>
