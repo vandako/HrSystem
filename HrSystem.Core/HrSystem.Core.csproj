@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Interfaces\Managers\" />
-    <Folder Include="Managers\" />
     <Folder Include="Enums\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>

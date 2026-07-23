@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -6,6 +6,10 @@
 		<Nullable>enable</Nullable>
 		<RootNamespace>HrSystem.Data</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="Repositories\LoginTokenRepository.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="EFCore.BulkExtensions" Version="8.1.2" />
