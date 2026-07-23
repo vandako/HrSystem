@@ -1,4 +1,4 @@
-﻿/*using HrSystem.Core.Interfaces.Services;
+﻿using HrSystem.Core.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -76,4 +76,4 @@ namespace HrSystem.Infrastructure.Services
         }
 
     }
-}*/
+}

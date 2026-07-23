@@ -1,4 +1,5 @@
-﻿/*using HrSystem.Core.Interfaces.Managers;
+﻿/*using HrSystem.Core.Interfaces.Services;
+using HrSystem.Core.Models;
 using HrSystem.Core.Interfaces.Repositories;
 using HrSystem.Core.Interfaces.Services;
 using HrSystem.Core.Managers;
@@ -6,17 +7,17 @@ using HrSystem.Core.Managers;
 using HrSystem.Core.Models;
 using HrSystem.Data;
 using HrSystem.Data.Repositories;
-
 //using CustomerForms.Data.Repositories;
 using HrSystem.Infrastructure.Services;
 using HrSystem.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 //using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
 
-namespace CustomerForms.Infrastructure.Configuration
+namespace HrSystem.Infrastructure.Configuration
 {
     public static class ServicesConfiguration
     {
@@ -37,12 +38,12 @@ namespace CustomerForms.Infrastructure.Configuration
             //config
             //services.AddSingleton(configuration.GetSection("SuperAppUser").Get<AppUserDto>());
             services.AddSingleton(configuration.GetSection(nameof(AppUrl)).Get<AppUrl>());
-            services.AddSingleton(configuration.GetSection(nameof(MailConfiguration)).Get<MailConfiguration>());
+            //services.AddSingleton(configuration.GetSection(nameof(MailConfiguration)).Get<MailConfiguration>());
             services.AddScoped<IDapperContext, DapperContext>();
             services.AddSingleton(configuration.GetSection(nameof(UtilityConfig)).Get<UtilityConfig>());
 
             //services
-            services.AddScoped(typeof(ILoggerService<>), typeof(LoggerService<>));
+            //services.AddScoped(typeof(ILoggerService<>), typeof(LoggerService<>));
             services.AddSingleton<IHttpService, HttpService>();
             services.AddSingleton<IHttpContextService, HttpContextService>();
             services.AddScoped<IUtilityService, UtilityService>();
@@ -53,12 +54,12 @@ namespace CustomerForms.Infrastructure.Configuration
             // services.AddScoped<ICsvService, CsvService>();
 
             //Manager
-            services.AddScoped<IUnitManager, UnitManager>();
-            services.AddScoped<IFunctionManager, FunctionManager>();
-            services.AddScoped<ILocationManager, LocationManager>();
+            //services.AddScoped<IUnitManager, UnitManager>();
+            //services.AddScoped<IFunctionManager, FunctionManager>();
+            //services.AddScoped<ILocationManager, LocationManager>();
             services.AddScoped<IRoleManager, RoleManager>();
-            services.AddScoped<IPermissionManager, PermissionManager>();
-            services.AddScoped<IRolePermissionManager, RolePermissionManager>();
+            //services.AddScoped<IPermissionManager, PermissionManager>();
+            //services.AddScoped<IRolePermissionManager, RolePermissionManager>();
             services.AddScoped<IUserRoleManager, UserRoleManager>();
 
             services.AddScoped<IAccountManager, AccountManager>();
@@ -66,12 +67,10 @@ namespace CustomerForms.Infrastructure.Configuration
 
             services.AddScoped<IEmailManager, EmailManager>();
             services.AddScoped<INGInterfaceDataManager, NGInterfaceDataManager>();
-            services.AddScoped<ICustomerInfoManager, CustomerInfoManager>();
-            services.AddScoped<ICompanyRepManager, CompanyRepManager>();
-            services.AddScoped<IBusinessInfoManager, BusinessInfoManager>();
-            services.AddScoped<IShipToManager, ShipToManager>();
-            services.AddScoped<ISoldToManager, SoldToManager>();
-
+            //services.AddScoped<ICustomerInfoManager, CustomerInfoManager>();
+            //services.AddScoped<ICompanyRepManager, CompanyRepManager>();
+            //services.AddScoped<IBusinessInfoManager, BusinessInfoManager>();
+           
 
 
 
@@ -90,20 +89,15 @@ namespace CustomerForms.Infrastructure.Configuration
             services.AddScoped<ICustomerIdentificationRepository, CustomerIdentificationRepository>();
 
             // Address book repository
-            services.AddScoped<IAddressBookRepository, AddressBookRepository>();
-            services.AddScoped<IAddressBookManager, AddressBookManager>();
+           // services.AddScoped<IAddressBookRepository, AddressBookRepository>();
+            //services.AddScoped<IAddressBookManager, AddressBookManager>();
 
             services.AddScoped<ILoginAttemptLogRepository, LoginAttemptLogRepository>();
             services.AddScoped<IConfirmationTokenRepository, ConfirmationTokenRepository>();
 
             services.AddScoped<ILoginTokenRepository, LoginTokenRepository>();
             services.AddScoped<IservicesRepository, ServicesRepository>();
-            services.AddScoped<ICustomerInfoRepository, CustomerInfoRepository>();
-            services.AddScoped<ICompanyRepRepository, CompanyRepRepository>();
-            services.AddScoped<IBusinessInfoRepository, BusinessInfoRepository>();
-            services.AddScoped<ISoldToRepository, SoldToRepository>();
-            services.AddScoped<IShipToRepository, ShipToRepository>();
-
+           
 
             //ProjectTracker
 

@@ -14,7 +14,7 @@ using System.Security.Claims;
 using System.Text;
 //using System.IdentityModel.Tokens.Jwt;
 
-namespace CustomerForms.Infrastructure.Services
+namespace HrSystem.Infrastructure.Services
 {
     public class JWTService : IJWTService
     {

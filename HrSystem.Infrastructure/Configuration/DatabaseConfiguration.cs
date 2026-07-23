@@ -1,6 +1,7 @@
+
 ﻿/*using HrSystem.Core.Enums;
 using HrSystem.Core.Enums;
-using CustomerForms.Core.Enums;
+using HrSystem.Core.Enums;
 using HrSystem.Core.Interfaces.Repositories;
 using HrSystem.Core.Interfaces.Repositories;
 using HrSystem.Core.Interfaces.Services;
@@ -208,4 +209,5 @@ namespace HrSystem.Infrastructure.Configuration
         }
 
     }
-}*/
+}
+//>>>>>>> 9a94e667647d49fe9668f9b73fafa82404a3f3c9*/
